@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GT Arsenals Training & Skill Acquisition — Computer, cybersecurity, networking, web design, graphics design, and hardware training in Old Secretariat, Garki 1, Abuja, FCT." />
+  <title>Training & Skill Acquisition | GT Arsenals Ltd — Abuja</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="canonical" href="https://gtarsenals.com/pages/training.html" />
+
+  <style>
+    /* ── Course Cards ── */
+    .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+    .course-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200); overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex; flex-direction: column;
+    }
+    .course-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--blue); }
+    .course-header {
+      background: linear-gradient(135deg, #0c2354, #1E5FB9);
+      padding: 24px 28px; color: var(--white);
+    }
+    .course-icon  { font-size: 2rem; margin-bottom: 10px; }
+    .course-header h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: var(--white); }
+    .course-header p  { font-size: 0.82rem; color: rgba(255,255,255,0.75); line-height: 1.5; }
+    .course-body  { padding: 24px 28px; display: flex; flex-direction: column; flex: 1; }
+    .course-meta  { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
+    .course-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--blue-pale); color: var(--blue);
+      font-size: 0.72rem; font-weight: 700;
+      padding: 5px 12px; border-radius: 100px;
+    }
+    .course-body ul { margin-bottom: 22px; flex: 1; }
+    .course-body li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.88rem; color: var(--gray-600);
+      padding: 7px 0; border-bottom: 1px solid var(--gray-100);
+      line-height: 1.5;
+    }
+    .course-body li:last-child { border-bottom: none; }
+
+    /* ── feat-icon used in course list items ── */
+    .feat-icon {
+      color: var(--blue); font-size: 0.85rem;
+      margin-top: 2px; flex-shrink: 0; font-weight: 700;
+    }
+
+    /* ── Why Train cards — OVERRIDE for light background ── */
+    /* The global .why-card style assumes a dark/black background.
+       On this page it's used on a light gray section, so we fix the colors here. */
+    .why-train-section .why-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+    }
+    .why-train-section .why-card h4 { color: var(--black); }
+    .why-train-section .why-card p  { color: var(--gray-600); }
+    .why-train-section .why-card:hover {
+      background: var(--blue-pale);
+      border-color: var(--blue);
+    }
+
+    /* ── Enrollment process ── */
+    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; margin-top: 56px; }
+    .process-step { text-align: center; }
+    .step-num {
+      width: 56px; height: 56px;
+      background: var(--blue); color: var(--white);
+      border-radius: 50%; font-size: 1.3rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .process-step h4 { font-weight: 700; margin-bottom: 8px; color: var(--black); }
+    .process-step p  { font-size: 0.88rem; color: var(--gray-600); line-height: 1.65; }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar" id="annBar">
+    🎓 New Training Cohort Forming Now — Limited Spots Available!
+    <button class="close-bar" id="closeBar">×</button>
+  </div>
+
+  <header class="navbar always-white" id="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo-placeholder">
+        <span class="logo-icon">GT</span>
+        <span class="logo-text" style="color:var(--black);">ARSENALS <em>LTD</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="services.html">Services</a>
+        <a href="training.html" style="color:var(--blue);">Training</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="blog.html">Blog</a>
+        <a href="../index.html#shop">Shop</a>
+        <a href="about.html">About</a>
+        <a href="../index.html#contact" class="nav-cta">Get a Quote</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,0.9);">Training</span></div>
+      <h1>Training & Skill Acquisition</h1>
+      <p>Practical, hands-on IT training programs designed to make you job-ready or business-ready in Abuja, Nigeria.</p>
+    </div>
+  </section>
+
+
+  <!-- Why Train With Us -->
+  <section class="section why-train-section" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Train With Us</span>
+        <h2>Learn Skills That Actually Pay</h2>
+        <p>We don't just teach theory. Every session is hands-on, practical, and designed around what Nigerian employers and clients actually need.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up"><div class="why-icon">🖥️</div><h4>Hands-On Learning</h4><p>Real equipment, real software, real scenarios. You learn by doing — not just watching slides.</p></div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="100"><div class="why-icon">🏆</div><h4>Certificates Awarded</h4><p>Earn a verifiable GT Arsenals certificate on completion of each course.</p></div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="200"><div class="why-icon">📅</div><h4>Flexible Schedules</h4><p>Morning, afternoon, and weekend sessions available. Work and learn at the same time.</p></div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="300"><div class="why-icon">💰</div><h4>Affordable Fees</h4><p>Quality training at prices that work for Nigerians. Ask about our payment plans.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Courses -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Courses</span>
+        <h2>Available Training Programs</h2>
+        <p>Choose a course that matches your goals. All courses are available <strong>in-person at our Garki 1 office</strong> or <strong>virtually via Zoom/Google Meet</strong> — same curriculum, same certificate.</p>
+      </div>
+
+      <div class="courses-grid">
+
+        <div class="course-card" data-aos="fade-up">
+          <div class="course-header">
+            <div class="course-icon">🖥️</div>
+            <h3>Computer Basics & Office Applications</h3>
+            <p>Perfect for beginners with no prior computer experience</p>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-badge">⏱ 4 Weeks</span>
+              <span class="course-badge">📅 Weekdays / Weekend</span>
+              <span class="course-badge">🎓 Certificate</span>
+              <span class="course-badge">💻 Virtual Available</span>
+            </div>
+            <ul>
+              <li><span class="feat-icon">✔</span>Windows OS fundamentals</li>
+              <li><span class="feat-icon">✔</span>Microsoft Word, Excel, PowerPoint</li>
+              <li><span class="feat-icon">✔</span>Email and internet skills</li>
+              <li><span class="feat-icon">✔</span>File management and printing</li>
+              <li><span class="feat-icon">✔</span>Google Workspace basics</li>
+            </ul>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27d%20like%20to%20enroll%20in%20Computer%20Basics%20training" class="btn btn-whatsapp full-width" target="_blank" rel="noopener">💬 Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="course-header">
+            <div class="course-icon">🌐</div>
+            <h3>Networking & System Administration</h3>
+            <p>For those pursuing IT careers or managing office networks</p>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-badge">⏱ 6 Weeks</span>
+              <span class="course-badge">📅 Weekdays</span>
+              <span class="course-badge">🎓 Certificate</span>
+              <span class="course-badge">💻 Virtual Available</span>
+            </div>
+            <ul>
+              <li><span class="feat-icon">✔</span>Network fundamentals and topologies</li>
+              <li><span class="feat-icon">✔</span>Router and switch configuration</li>
+              <li><span class="feat-icon">✔</span>Windows Server administration</li>
+              <li><span class="feat-icon">✔</span>IP addressing and subnetting</li>
+              <li><span class="feat-icon">✔</span>Troubleshooting network issues</li>
+            </ul>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27d%20like%20to%20enroll%20in%20Networking%20training" class="btn btn-whatsapp full-width" target="_blank" rel="noopener">💬 Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="course-header">
+            <div class="course-icon">🔒</div>
+            <h3>Cybersecurity Fundamentals</h3>
+            <p>One of the most in-demand skills in Nigeria right now</p>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-badge">⏱ 8 Weeks</span>
+              <span class="course-badge">📅 Weekdays / Weekend</span>
+              <span class="course-badge">🎓 Certificate</span>
+              <span class="course-badge">💻 Virtual Available</span>
+            </div>
+            <ul>
+              <li><span class="feat-icon">✔</span>Cybersecurity concepts and threats</li>
+              <li><span class="feat-icon">✔</span>Ethical hacking basics</li>
+              <li><span class="feat-icon">✔</span>Network security and firewalls</li>
+              <li><span class="feat-icon">✔</span>Vulnerability scanning tools</li>
+              <li><span class="feat-icon">✔</span>Security compliance and policy</li>
+            </ul>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27d%20like%20to%20enroll%20in%20Cybersecurity%20training" class="btn btn-whatsapp full-width" target="_blank" rel="noopener">💬 Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-aos="fade-up">
+          <div class="course-header">
+            <div class="course-icon">💻</div>
+            <h3>Web Design & Development</h3>
+            <p>Build professional websites from scratch</p>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-badge">⏱ 8 Weeks</span>
+              <span class="course-badge">📅 Weekdays</span>
+              <span class="course-badge">🎓 Certificate</span>
+              <span class="course-badge">💻 Virtual Available</span>
+            </div>
+            <ul>
+              <li><span class="feat-icon">✔</span>HTML5 and CSS3 fundamentals</li>
+              <li><span class="feat-icon">✔</span>Responsive design principles</li>
+              <li><span class="feat-icon">✔</span>JavaScript basics</li>
+              <li><span class="feat-icon">✔</span>WordPress site building</li>
+              <li><span class="feat-icon">✔</span>Domain and hosting setup</li>
+            </ul>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27d%20like%20to%20enroll%20in%20Web%20Design%20training" class="btn btn-whatsapp full-width" target="_blank" rel="noopener">💬 Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="course-header">
+            <div class="course-icon">🎨</div>
+            <h3>Graphics Design</h3>
+            <p>Create stunning visuals for business and freelancing</p>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-badge">⏱ 6 Weeks</span>
+              <span class="course-badge">📅 Weekdays / Weekend</span>
+              <span class="course-badge">🎓 Certificate</span>
+              <span class="course-badge">💻 Virtual Available</span>
+            </div>
+            <ul>
+              <li><span class="feat-icon">✔</span>Canva (beginner to advanced)</li>
+              <li><span class="feat-icon">✔</span>Adobe Photoshop basics</li>
+              <li><span class="feat-icon">✔</span>CorelDRAW fundamentals</li>
+              <li><span class="feat-icon">✔</span>Logo and brand design</li>
+              <li><span class="feat-icon">✔</span>Print and social media graphics</li>
+            </ul>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27d%20like%20to%20enroll%20in%20Graphics%20Design%20training" class="btn btn-whatsapp full-width" target="_blank" rel="noopener">💬 Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="course-header">
+            <div class="course-icon">🔧</div>
+            <h3>Hardware Maintenance & Repairs</h3>
+            <p>Learn to diagnose and fix computers professionally</p>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-badge">⏱ 6 Weeks</span>
+              <span class="course-badge">📅 Weekdays</span>
+              <span class="course-badge">🎓 Certificate</span>
+              <span class="course-badge">💻 Virtual Available</span>
+            </div>
+            <ul>
+              <li><span class="feat-icon">✔</span>PC components and architecture</li>
+              <li><span class="feat-icon">✔</span>Hardware disassembly and repair</li>
+              <li><span class="feat-icon">✔</span>Laptop screen and keyboard replacement</li>
+              <li><span class="feat-icon">✔</span>OS installation and drivers</li>
+              <li><span class="feat-icon">✔</span>Running a repairs business</li>
+            </ul>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27d%20like%20to%20enroll%20in%20Hardware%20Maintenance%20training" class="btn btn-whatsapp full-width" target="_blank" rel="noopener">💬 Enroll Now</a>
+          </div>
+        </div>
+
+
+        <div class="course-card" data-aos="fade-up">
+          <div class="course-header">
+            <div class="course-icon">📱</div>
+            <h3>Social Media Management</h3>
+            <p>Turn social media skills into a profitable career or business asset</p>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-badge">⏱ 5 Weeks</span>
+              <span class="course-badge">📅 Weekdays / Weekend</span>
+              <span class="course-badge">🎓 Certificate</span>
+              <span class="course-badge">💻 Virtual Available</span>
+            </div>
+            <ul>
+              <li><span class="feat-icon">✔</span>Facebook, Instagram &amp; TikTok strategy</li>
+              <li><span class="feat-icon">✔</span>Content creation and scheduling tools</li>
+              <li><span class="feat-icon">✔</span>Paid advertising (Meta Ads basics)</li>
+              <li><span class="feat-icon">✔</span>Analytics and performance tracking</li>
+              <li><span class="feat-icon">✔</span>Freelancing and client management</li>
+            </ul>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27d%20like%20to%20enroll%20in%20Social%20Media%20Management%20training" class="btn btn-whatsapp full-width" target="_blank" rel="noopener">💬 Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="course-header">
+            <div class="course-icon">📈</div>
+            <h3>Introduction to Forex &amp; Cryptocurrency</h3>
+            <p>Understand financial markets and digital assets — responsibly</p>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-badge">⏱ 6 Weeks</span>
+              <span class="course-badge">📅 Weekdays / Weekend</span>
+              <span class="course-badge">🎓 Certificate</span>
+              <span class="course-badge">💻 Virtual Available</span>
+            </div>
+            <ul>
+              <li><span class="feat-icon">✔</span>How forex and crypto markets work</li>
+              <li><span class="feat-icon">✔</span>Reading charts and technical analysis</li>
+              <li><span class="feat-icon">✔</span>Risk management and trading psychology</li>
+              <li><span class="feat-icon">✔</span>Popular platforms: MT4, Binance, etc.</li>
+              <li><span class="feat-icon">✔</span>Avoiding scams — Nigerian context focus</li>
+            </ul>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27d%20like%20to%20enroll%20in%20Forex%20and%20Crypto%20training" class="btn btn-whatsapp full-width" target="_blank" rel="noopener">💬 Enroll Now</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Enrollment Process -->
+  <section class="section" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How To Enroll</span>
+        <h2>Simple 4-Step Process</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step" data-aos="fade-up">
+          <div class="step-num">1</div>
+          <h4>Choose a Course</h4>
+          <p>Browse the available programs above and pick the course that best matches your goals and current skill level.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-num">2</div>
+          <h4>Contact Us</h4>
+          <p>WhatsApp us or fill the enrollment form below. Tell us your chosen course and preferred schedule — weekday morning, afternoon, or weekend.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-num">3</div>
+          <h4>Pay &amp; Register</h4>
+          <p>Complete your registration fee via bank transfer or on-site payment. Your spot is only confirmed after payment. Installment plans available on request.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-num">4</div>
+          <h4>Choose: Physical or Virtual</h4>
+          <p>Attend in-person at our Garki 1 training centre — or join <strong>live virtual classes</strong> via Google Meet or Zoom from anywhere in Nigeria. Both options receive the same certificate on completion. Let us know your preference when enrolling.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;justify-content:center;">
+            <span style="background:var(--blue-pale);color:var(--blue);font-size:0.74rem;font-weight:700;padding:5px 12px;border-radius:100px;">🏢 Physical — Garki 1</span>
+            <span style="background:#f0fdf4;color:#16a34a;font-size:0.74rem;font-weight:700;padding:5px 12px;border-radius:100px;">💻 Virtual — Zoom/Meet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Enroll CTA + Form -->
+  <section class="contact section" id="enroll">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <span class="section-tag">Enroll Today</span>
+        <h2>Ready to Start?</h2>
+        <p>Reach out to us right now. WhatsApp is the fastest way to confirm your enrollment and ask questions.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-icon">💬</span>
+            <div><strong>WhatsApp (Fastest)</strong><a href="https://wa.me/2347071188890" target="_blank" rel="noopener">+234 707 118 8890</a></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div><strong>Email</strong><a href="mailto:info@gtarsenals.com">info@gtarsenals.com</a></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div><strong>Training Centre</strong><span>Old Secretariat, Garki 1, Abuja, FCT</span></div>
+          </div>
+        </div>
+        <a href="https://wa.me/2347071188890?text=Hi,%20I%20want%20to%20enroll%20in%20a%20training%20course%20at%20GT%20Arsenals" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          💬 Enroll on WhatsApp Now
+        </a>
+      </div>
+
+      <form class="contact-form" novalidate>
+        <h3>Send Enrollment Inquiry</h3>
+        <div style="display:none;"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+        <div class="form-group"><label for="t-name">Full Name *</label><input type="text" id="t-name" name="name" placeholder="Your full name" required /></div>
+        <div class="form-group"><label for="t-email">Email Address *</label><input type="email" id="t-email" name="email" placeholder="you@email.com" required /></div>
+        <div class="form-group"><label for="t-phone">Phone / WhatsApp</label><input type="tel" id="t-phone" name="phone" placeholder="+234 707 118 8890" /></div>
+        <div class="form-group">
+          <label for="t-course">Which Course?</label>
+          <select id="t-course" name="service">
+            <option value="">— Select a course —</option>
+            <option>Computer Basics & Office Applications</option>
+            <option>Networking & System Administration</option>
+            <option>Cybersecurity Fundamentals</option>
+            <option>Web Design & Development</option>
+            <option>Graphics Design</option>
+            <option>Hardware Maintenance & Repairs</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="t-mode">Learning Format *</label>
+          <select id="t-mode" name="learning_mode" required>
+            <option value="">— Select your preference —</option>
+            <option value="physical">🏢 Physical — Attend in person at Garki 1, Abuja</option>
+            <option value="virtual">💻 Virtual — Live online via Zoom / Google Meet</option>
+            <option value="hybrid">🔄 Hybrid — Mix of both (as available)</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="t-message">Questions or Preferred Schedule *</label><textarea id="t-message" name="message" rows="4" placeholder="E.g. I prefer weekend morning classes, or I'm based in Lagos and want virtual sessions" required></textarea></div>
+        <button type="submit" class="btn btn-primary full-width">Send Inquiry →</button>
+        <div class="form-status" role="alert"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-placeholder footer-logo">
+          <span class="logo-icon">GT</span>
+          <span class="logo-text">ARSENALS <em>LTD</em></span>
+        </div>
+        <p>Your complete technology partner in Abuja, FCT. CAC Registered. Serving individuals, startups, and businesses across Nigeria.</p>
+        <p class="rc-note">RC: 8340467 &nbsp;|&nbsp; Est. March 2025</p>
+        <p style="margin-top:16px;">
+          <a href="#" aria-label="Facebook" style="margin-right:14px;font-size:1.1rem;">📘</a>
+          <a href="#" aria-label="Instagram" style="margin-right:14px;font-size:1.1rem;">📷</a>
+          <a href="#" aria-label="LinkedIn" style="margin-right:14px;font-size:1.1rem;">💼</a>
+          <a href="https://wa.me/2347071188890" aria-label="WhatsApp" style="font-size:1.1rem;">💬</a>
+        </p>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-services">
+        <h5>Services</h5>
+        <ul>
+          <li>IT Services &amp; Networking</li>
+          <li>Cybersecurity</li>
+          <li>Software Development</li>
+          <li>PC Assembly</li>
+          <li>Computer Repairs</li>
+          <li>Graphics Design</li>
+          <li>Training &amp; Skills</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Contact Us</h5>
+        <p>📧 <a href="mailto:info@gtarsenals.com">info@gtarsenals.com</a></p>
+        <p>📱 <a href="tel:+2347071188890">+234 707 118 8890</a></p>
+        <p>📍 Old Secretariat, Garki 1, Abuja, FCT</p>
+        <p>🕐 Mon – Sat &nbsp; 8am – 6pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span class="footer-year"></span> GT Arsenals Ltd. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; Built by GT Arsenals</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2347071188890" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬<span class="wa-tooltip">Chat on WhatsApp</span></a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

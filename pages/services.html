@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GT Arsenals Ltd Services — IT support, networking, cybersecurity, software development, PC assembly, repairs, graphics design, and general contracts in Abuja, FCT." />
+  <title>Our Services | GT Arsenals Ltd — Abuja, FCT</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="canonical" href="https://gtarsenals.com/pages/services.html" />
+
+  <style>
+    /* ── Page-specific styles ── */
+    .service-detail {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .service-detail:nth-child(even) { background: var(--gray-100); }
+    .service-detail-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .service-detail-inner.reverse { direction: rtl; }
+    .service-detail-inner.reverse > * { direction: ltr; }
+    .service-detail h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 16px; }
+    .service-detail p  { color: var(--gray-600); line-height: 1.8; margin-bottom: 14px; }
+    .service-features  { margin: 20px 0 28px; }
+    .service-features li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 8px 0; font-size: 0.93rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .service-features li:last-child { border-bottom: none; }
+    .feat-icon { color: var(--blue); font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
+    .pricing-note {
+      display: inline-block;
+      background: var(--blue-pale);
+      color: var(--blue);
+      font-size: 0.82rem; font-weight: 600;
+      padding: 8px 16px; border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      .service-detail-inner { grid-template-columns: 1fr; gap: 36px; }
+      .service-detail-inner.reverse { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" id="annBar">
+    🎓 New Training Cohort Starting Soon! <a href="training.html">Enroll Now →</a>
+    <button class="close-bar" id="closeBar">×</button>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar always-white" id="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo-placeholder">
+        <span class="logo-icon">GT</span>
+        <span class="logo-text" style="color:var(--black);">ARSENALS <em>LTD</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="services.html" style="color:var(--blue);">Services</a>
+        <a href="training.html">Training</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="blog.html">Blog</a>
+        <a href="../index.html#shop">Shop</a>
+        <a href="about.html">About</a>
+        <a href="../index.html#contact" class="nav-cta">Get a Quote</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,0.9);">Services</span>
+      </div>
+      <h1>Our Services</h1>
+      <p>Complete technology solutions for individuals, startups, and businesses across Abuja and Nigeria.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICE: GADGETS & HARDWARE ══════════════════════════ -->
+  <section class="service-detail" id="gadgets">
+    <div class="container service-detail-inner">
+      <div>
+        <span class="section-tag">Hardware</span>
+        <h2>🖥️ Gadgets & Hardware Sales</h2>
+        <span class="pricing-note">💰 Competitive prices — WhatsApp for quote</span>
+        <p>We source and supply quality gadgets and IT hardware from trusted suppliers. Whether you're an individual needing a laptop or a company outfitting an office, we've got you covered.</p>
+        <ul class="service-features">
+          <li><span class="feat-icon">✔</span> New and fairly-used laptops (Dell, HP, Lenovo, Apple)</li>
+          <li><span class="feat-icon">✔</span> Desktop computers and all-in-ones</li>
+          <li><span class="feat-icon">✔</span> Keyboards, mice, monitors, headsets</li>
+          <li><span class="feat-icon">✔</span> Printers, scanners, projectors</li>
+          <li><span class="feat-icon">✔</span> UPS and power backup solutions</li>
+          <li><span class="feat-icon">✔</span> Genuine warranties and after-sale support</li>
+        </ul>
+        <a href="https://wa.me/2347071188890?text=Hi,%20I%27m%20interested%20in%20gadgets%20and%20hardware" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Get a Price Quote</a>
+      </div>
+      <div class="img-placeholder" style="min-height:360px;">
+        <div class="placeholder-inner">
+          <span class="placeholder-icon">📸</span>
+          <p>Add service image</p><code>service-gadgets.jpg</code>
+          <small>800×600px recommended</small>
+        </div>
+        <!-- Replace with: <img src="../images/service-gadgets.jpg" alt="Gadgets and Hardware" /> -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICE: NETWORKING ═══════════════════════════════════ -->
+  <section class="service-detail" id="networking">
+    <div class="container service-detail-inner reverse">
+      <div>
+        <span class="section-tag">Networking</span>
+        <h2>🌐 IT Services & Networking</h2>
+        <span class="pricing-note">💰 Custom quote based on project size</span>
+        <p>Reliable network infrastructure is the backbone of every modern business. We design, install, configure, and maintain networks that are fast, secure, and scalable.</p>
+        <ul class="service-features">
+          <li><span class="feat-icon">✔</span> LAN/WAN network design and installation</li>
+          <li><span class="feat-icon">✔</span> Wi-Fi setup and optimization</li>
+          <li><span class="feat-icon">✔</span> Structured cabling (Cat5e, Cat6, fiber)</li>
+          <li><span class="feat-icon">✔</span> Router and switch configuration</li>
+          <li><span class="feat-icon">✔</span> Server setup and administration</li>
+          <li><span class="feat-icon">✔</span> Ongoing IT support and maintenance contracts</li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-primary">Request a Site Assessment</a>
+      </div>
+      <div class="img-placeholder" style="min-height:360px;">
+        <div class="placeholder-inner">
+          <span class="placeholder-icon">📸</span>
+          <p>Add service image</p><code>service-networking.jpg</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICE: CYBERSECURITY ════════════════════════════════ -->
+  <section class="service-detail" id="cybersecurity">
+    <div class="container service-detail-inner">
+      <div>
+        <span class="section-tag">Security</span>
+        <h2>🔒 Cybersecurity</h2>
+        <span class="pricing-note">💰 Starting from assessment — contact us</span>
+        <p>Cyber threats are growing in Nigeria. Ransomware, phishing, data breaches — businesses of all sizes are targets. We help you identify vulnerabilities and implement proper defenses before attacks happen.</p>
+        <ul class="service-features">
+          <li><span class="feat-icon">✔</span> Vulnerability assessment & penetration testing</li>
+          <li><span class="feat-icon">✔</span> Firewall setup and configuration</li>
+          <li><span class="feat-icon">✔</span> Endpoint security and antivirus deployment</li>
+          <li><span class="feat-icon">✔</span> Security policy development</li>
+          <li><span class="feat-icon">✔</span> Employee cybersecurity awareness training</li>
+          <li><span class="feat-icon">✔</span> Incident response and recovery</li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-primary">Book a Security Assessment</a>
+      </div>
+      <div class="img-placeholder" style="min-height:360px;">
+        <div class="placeholder-inner">
+          <span class="placeholder-icon">📸</span>
+          <p>Add service image</p><code>service-cybersecurity.jpg</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICE: SOFTWARE DEV ════════════════════════════════ -->
+  <section class="service-detail" id="software">
+    <div class="container service-detail-inner reverse">
+      <div>
+        <span class="section-tag">Software</span>
+        <h2>💻 Software Development</h2>
+        <span class="pricing-note">💰 Project-based pricing — get a free quote</span>
+        <p>We build digital solutions that solve real problems. From simple business websites to complex web applications, our development process is structured, transparent, and client-focused.</p>
+        <ul class="service-features">
+          <li><span class="feat-icon">✔</span> Corporate and business websites</li>
+          <li><span class="feat-icon">✔</span> E-commerce platforms (online stores)</li>
+          <li><span class="feat-icon">✔</span> Custom web applications</li>
+          <li><span class="feat-icon">✔</span> School management systems</li>
+          <li><span class="feat-icon">✔</span> Inventory and POS systems</li>
+          <li><span class="feat-icon">✔</span> Website maintenance and hosting support</li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-primary">Discuss Your Project</a>
+      </div>
+      <div class="img-placeholder" style="min-height:360px;">
+        <div class="placeholder-inner">
+          <span class="placeholder-icon">📸</span>
+          <p>Add service image</p><code>service-software.jpg</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICE: PC ASSEMBLY ═════════════════════════════════ -->
+  <section class="service-detail" id="assembly">
+    <div class="container service-detail-inner">
+      <div>
+        <span class="section-tag">Hardware</span>
+        <h2>🖨️ PC Assembly</h2>
+        <span class="pricing-note">💰 Custom quotes based on spec</span>
+        <p>Need a machine built to your exact specs? We assemble custom PCs using quality components — optimized for gaming, design, video editing, office work, or server applications.</p>
+        <ul class="service-features">
+          <li><span class="feat-icon">✔</span> Gaming desktops and workstations</li>
+          <li><span class="feat-icon">✔</span> Business and office PCs</li>
+          <li><span class="feat-icon">✔</span> Budget builds for students</li>
+          <li><span class="feat-icon">✔</span> Server builds for small businesses</li>
+          <li><span class="feat-icon">✔</span> Component sourcing advice</li>
+          <li><span class="feat-icon">✔</span> OS installation and setup included</li>
+        </ul>
+        <a href="https://wa.me/2347071188890?text=Hi,%20I%20want%20a%20custom%20PC%20built" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Get Build Quote</a>
+      </div>
+      <div class="img-placeholder" style="min-height:360px;">
+        <div class="placeholder-inner">
+          <span class="placeholder-icon">📸</span>
+          <p>Add service image</p><code>service-pc-assembly.jpg</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICE: REPAIRS ══════════════════════════════════════ -->
+  <section class="service-detail" id="repairs">
+    <div class="container service-detail-inner reverse">
+      <div>
+        <span class="section-tag">Repairs</span>
+        <h2>🔧 Computer Repairs</h2>
+        <span class="pricing-note">💰 Diagnosis is free — pay only if we fix it</span>
+        <p>Cracked screen? Won't boot? Running slow? Virus? We diagnose and fix the real problem — no guesswork, no unnecessary parts replacements.</p>
+        <ul class="service-features">
+          <li><span class="feat-icon">✔</span> Laptop and desktop hardware repairs</li>
+          <li><span class="feat-icon">✔</span> Screen replacements (laptop and phone)</li>
+          <li><span class="feat-icon">✔</span> Virus removal and system cleanup</li>
+          <li><span class="feat-icon">✔</span> Data recovery from damaged drives</li>
+          <li><span class="feat-icon">✔</span> OS reinstallation and software setup</li>
+          <li><span class="feat-icon">✔</span> Printer and peripheral repairs</li>
+        </ul>
+        <a href="https://wa.me/2347071188890?text=Hi,%20my%20computer%20needs%20repair" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Describe Your Issue</a>
+      </div>
+      <div class="img-placeholder" style="min-height:360px;">
+        <div class="placeholder-inner">
+          <span class="placeholder-icon">📸</span>
+          <p>Add service image</p><code>service-repairs.jpg</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICE: GRAPHICS DESIGN ════════════════════════════ -->
+  <section class="service-detail" id="graphics">
+    <div class="container service-detail-inner">
+      <div>
+        <span class="section-tag">Design</span>
+        <h2>🎨 Graphics Design</h2>
+        <span class="pricing-note">💰 Project-based — contact for pricing</span>
+        <p>Your brand is your first impression. We create professional, memorable visual content that represents your business the right way.</p>
+        <ul class="service-features">
+          <li><span class="feat-icon">✔</span> Logo and brand identity design</li>
+          <li><span class="feat-icon">✔</span> Business cards, letterheads, stationery</li>
+          <li><span class="feat-icon">✔</span> Flyers, banners, and posters</li>
+          <li><span class="feat-icon">✔</span> Social media graphics and templates</li>
+          <li><span class="feat-icon">✔</span> Brochures and company profiles</li>
+          <li><span class="feat-icon">✔</span> Print-ready and digital formats</li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-primary">Start a Design Project</a>
+      </div>
+      <div class="img-placeholder" style="min-height:360px;">
+        <div class="placeholder-inner">
+          <span class="placeholder-icon">📸</span>
+          <p>Add service image</p><code>service-graphics.jpg</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICE: GENERAL CONTRACTS ══════════════════════════ -->
+  <section class="service-detail" id="contracts">
+    <div class="container service-detail-inner reverse">
+      <div>
+        <span class="section-tag">Contracts</span>
+        <h2>📋 General Contracts & Procurement</h2>
+        <span class="pricing-note">💰 RFQ-based — contact for proposal</span>
+        <p>GT Arsenals is positioned to handle ICT procurement, consulting, and project delivery for organizations, government agencies, schools, and NGOs in Nigeria.</p>
+        <ul class="service-features">
+          <li><span class="feat-icon">✔</span> IT equipment procurement and supply</li>
+          <li><span class="feat-icon">✔</span> Technology consulting and advisory</li>
+          <li><span class="feat-icon">✔</span> Project management and execution</li>
+          <li><span class="feat-icon">✔</span> Computer lab setup for schools</li>
+          <li><span class="feat-icon">✔</span> Corporate ICT training programs</li>
+          <li><span class="feat-icon">✔</span> Government and institutional contracts</li>
+        </ul>
+        <a href="../index.html#contact" class="btn btn-primary">Submit a Request for Quote</a>
+      </div>
+      <div class="img-placeholder" style="min-height:360px;">
+        <div class="placeholder-inner">
+          <span class="placeholder-icon">📸</span>
+          <p>Add service image</p><code>service-contracts.jpg</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Not Sure Which Service You Need?</h2>
+      <p>Just reach out and we'll guide you to the right solution.</p>
+      <div class="cta-actions">
+        <a href="../index.html#contact" class="btn btn-outline">Send a Message</a>
+        <a href="https://wa.me/2347071188890" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-placeholder footer-logo">
+          <span class="logo-icon">GT</span>
+          <span class="logo-text">ARSENALS <em>LTD</em></span>
+        </div>
+        <p>Your complete technology partner in Abuja, FCT. CAC Registered. Serving individuals, startups, and businesses across Nigeria.</p>
+        <p class="rc-note">RC: 8340467 &nbsp;|&nbsp; Est. March 2025</p>
+        <p style="margin-top:16px;">
+          <a href="#" aria-label="Facebook" style="margin-right:14px;font-size:1.1rem;">📘</a>
+          <a href="#" aria-label="Instagram" style="margin-right:14px;font-size:1.1rem;">📷</a>
+          <a href="#" aria-label="LinkedIn" style="margin-right:14px;font-size:1.1rem;">💼</a>
+          <a href="https://wa.me/2347071188890" aria-label="WhatsApp" style="font-size:1.1rem;">💬</a>
+        </p>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-services">
+        <h5>Services</h5>
+        <ul>
+          <li>IT Services &amp; Networking</li>
+          <li>Cybersecurity</li>
+          <li>Software Development</li>
+          <li>PC Assembly</li>
+          <li>Computer Repairs</li>
+          <li>Graphics Design</li>
+          <li>Training &amp; Skills</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Contact Us</h5>
+        <p>📧 <a href="mailto:info@gtarsenals.com">info@gtarsenals.com</a></p>
+        <p>📱 <a href="tel:+2347071188890">+234 707 118 8890</a></p>
+        <p>📍 Old Secretariat, Garki 1, Abuja, FCT</p>
+        <p>🕐 Mon – Sat &nbsp; 8am – 6pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span class="footer-year"></span> GT Arsenals Ltd. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; Built by GT Arsenals</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2347071188890" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    💬<span class="wa-tooltip">Chat on WhatsApp</span>
+  </a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

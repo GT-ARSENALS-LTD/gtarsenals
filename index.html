@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GT Arsenals Ltd — Complete technology solutions in Abuja, FCT. IT Services, Gadgets, Cybersecurity, Software Development, Computer Training & More. CAC Registered RC: 8340467." />
+  <meta name="keywords" content="IT company Abuja, gadgets Abuja FCT, cybersecurity Nigeria, computer training Abuja, software development Nigeria, networking Abuja, PC repair Abuja, graphics design" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph for WhatsApp/Facebook sharing -->
+  <meta property="og:title" content="GT Arsenals Ltd — Your Technology Partner in Abuja" />
+  <meta property="og:description" content="Complete IT solutions: Hardware, Software, Networking, Cybersecurity, Training & More. CAC Registered. Based in Abuja, FCT." />
+  <meta property="og:image" content="images/og-banner.jpg" />
+  <!-- Rename: og-banner.jpg | Size: 1200×630px -->
+  <meta property="og:url" content="https://gtarsenals.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GT Arsenals Ltd" />
+
+  <title>GT Arsenals Ltd | IT Solutions, Gadgets & Training — Abuja, FCT</title>
+
+  <!-- Favicon: rename to favicon.png, size 64×64px, place in /images/ -->
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
+  <!-- Montserrat = closest free match to Gotham font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Canonical URL (important for Google SEO) -->
+  <link rel="canonical" href="https://gtarsenals.com/" />
+</head>
+<body>
+
+  <!-- ═══ ANNOUNCEMENT BAR ══════════════════════════════════════
+       Update this text whenever you have a promotion or news.
+       Hides when closed and remembers in session.
+  ════════════════════════════════════════════════════════════════ -->
+  <div class="announcement-bar" id="annBar">
+    🎓 <strong>New Training Cohort Starting Soon!</strong> — Enroll now &amp; secure your spot.
+    <a href="pages/training.html">Learn More →</a>
+    <button class="close-bar" id="closeBar" aria-label="Close announcement">×</button>
+  </div>
+
+
+  <!-- ═══ NAVBAR ═══════════════════════════════════════════════ -->
+  <header class="navbar transparent" id="navbar">
+    <div class="container nav-inner">
+
+      <!--
+        LOGO PLACEHOLDER
+        When your logo is ready:
+        1. Rename to: logo.png (for light bg) and logo-white.png (for dark bg)
+        2. Place in /images/
+        3. Replace this <a> block with:
+           <a href="index.html">
+             <img src="images/logo-white.png" alt="GT Arsenals" class="logo-img" id="navLogo" />
+           </a>
+        4. In JS, toggle between logo.png and logo-white.png on scroll
+      -->
+      <a href="index.html" class="logo-placeholder" aria-label="GT Arsenals Home">
+        <span class="logo-icon">GT</span>
+        <span class="logo-text">ARSENALS <em>LTD</em></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="pages/services.html">Services</a>
+        <a href="pages/training.html">Training</a>
+        <a href="pages/pricing.html">Pricing</a>
+        <a href="pages/blog.html">Blog</a>
+        <a href="index.html#shop">Shop</a>
+        <a href="pages/about.html">About</a>
+        <a href="index.html#contact" class="nav-cta">Get a Quote</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ═══ HERO ══════════════════════════════════════════════════ -->
+  <section class="hero" id="home" aria-label="Hero section">
+    <!--
+      HERO BACKGROUND:
+      To use a real photo: add a div with class="hero-bg" and inline style:
+        <div class="hero-bg" style="background-image: url('images/hero-bg.jpg');"></div>
+      Rename file to: hero-bg.jpg | Size: 1920×1080px
+      Then remove .hero-bg-fallback
+    -->
+    <div class="hero-bg-fallback" aria-hidden="true"></div>
+    <div class="hero-shape"       aria-hidden="true"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">Proudly Nigerian. Globally Standard.</div>
+
+      <h1 class="hero-title">
+        Your Complete<br />
+        <span class="highlight">Technology Partner</span><br />
+        in Abuja, FCT.
+      </h1>
+
+      <p class="hero-subtitle">
+        From gadgets and hardware to cybersecurity and software development —
+        GT Arsenals delivers end-to-end technology solutions for individuals,
+        startups, and businesses across Nigeria.
+      </p>
+
+      <div class="hero-actions">
+        <a href="pages/services.html" class="btn btn-primary">Explore Our Services</a>
+        <a href="https://wa.me/2347071188890" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <!-- Replace 2347071188890 with your WhatsApp number (no spaces, no +) -->
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TRUST SIGNALS BAR ════════════════════════════════════
+       Research finding: Nigerian clients want immediate trust signals.
+       These appear right after the hero for maximum impact.
+  ════════════════════════════════════════════════════════════════ -->
+  <div class="trust-bar" role="complementary" aria-label="Trust signals">
+    <div class="container trust-bar-inner">
+      <div class="trust-signal">
+        <span class="ts-icon">🏛️</span>
+        <div><strong>CAC Registered</strong><span> — RC 8340467</span></div>
+      </div>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <div class="trust-signal">
+        <span class="ts-icon">🔒</span>
+        <div><strong>SSL Secured</strong><span> — HTTPS</span></div>
+      </div>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <div class="trust-signal">
+        <span class="ts-icon">📍</span>
+        <div><strong>Abuja, FCT</strong><span> — Physical Office</span></div>
+      </div>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <div class="trust-signal">
+        <span class="ts-icon">💬</span>
+        <div><strong>WhatsApp Support</strong><span> — Quick replies</span></div>
+      </div>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <div class="trust-signal">
+        <span class="ts-icon">⭐</span>
+        <div><strong>5-Star Rated</strong><span> — Google Reviews</span></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ STATS BAR ════════════════════════════════════════════ -->
+  <section class="stats-bar" aria-label="Company statistics">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="200">0</span><span class="stat-suffix">+</span>
+        <p>Clients Served</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+        <p>Services Offered</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="2025">0</span>
+        <p>Year Founded</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="24">0</span><span class="stat-suffix">h</span>
+        <p>Response Time</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICES (Overview) ══════════════════════════════════ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Do</span>
+        <h2>Our Services</h2>
+        <p>One company, complete tech coverage. Everything your business or personal IT needs — under one roof.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-icon">🖥️</div>
+          <h3>Gadgets & Hardware Sales</h3>
+          <p>Laptops, desktops, accessories, and peripherals from trusted suppliers at competitive prices across Abuja.</p>
+          <a href="pages/services.html#gadgets" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="service-icon">🌐</div>
+          <h3>IT Services & Networking</h3>
+          <p>Network design, installation, and maintenance for homes, offices, and organizations of all sizes.</p>
+          <a href="pages/services.html#networking" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="service-icon">🔒</div>
+          <h3>Cybersecurity</h3>
+          <p>Protect your business. Vulnerability assessments, firewall setup, security audits, and employee training.</p>
+          <a href="pages/services.html#cybersecurity" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="service-icon">💻</div>
+          <h3>Software Development</h3>
+          <p>Custom websites, web applications, and business software built for your specific needs and goals.</p>
+          <a href="pages/services.html#software" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="service-icon">🖨️</div>
+          <h3>PC Assembly</h3>
+          <p>Custom-built PCs for gaming, workstations, servers, and business desktops. Assembled to your exact spec.</p>
+          <a href="pages/services.html#assembly" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon">🔧</div>
+          <h3>Computer Repairs</h3>
+          <p>Fast, reliable hardware and software repairs with proper diagnosis. We fix laptops, desktops, and printers.</p>
+          <a href="pages/services.html#repairs" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="480">
+          <div class="service-icon">🎨</div>
+          <h3>Graphics Design</h3>
+          <p>Professional branding, logos, flyers, social media graphics, and print materials for your business.</p>
+          <a href="pages/services.html#graphics" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="560">
+          <div class="service-icon">📋</div>
+          <h3>General Contracts</h3>
+          <p>IT procurement, project management, and technology consulting for organizations, NGOs, and government bodies.</p>
+          <a href="pages/services.html#contracts" class="service-link">Learn More →</a>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top: 48px;">
+        <a href="pages/services.html" class="btn btn-primary">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TRAINING TEASER ═══════════════════════════════════════ -->
+  <section class="training section" id="training">
+    <div class="container training-inner">
+      <div class="training-text">
+        <span class="section-tag">Learn With Us</span>
+        <h2>Training & Skill Acquisition</h2>
+        <p>
+          We believe in empowering Nigerians with practical digital skills. Our hands-on
+          training programs are designed to make you job-ready or business-ready — fast.
+        </p>
+        <ul class="training-courses">
+          <li><span class="check">✔</span> Computer Basics & Office Applications</li>
+          <li><span class="check">✔</span> Networking & System Administration</li>
+          <li><span class="check">✔</span> Cybersecurity Fundamentals</li>
+          <li><span class="check">✔</span> Web Design & Development</li>
+          <li><span class="check">✔</span> Graphics Design (Canva, Photoshop, CorelDraw)</li>
+          <li><span class="check">✔</span> Hardware Maintenance & Repairs</li>
+        </ul>
+        <div class="enroll-actions">
+          <a href="pages/training.html" class="btn btn-primary">View All Courses</a>
+          <a href="https://wa.me/2347071188890?text=Hello%20GT%20Arsenals%2C%20I%20want%20to%20enroll%20in%20training" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <!-- Replace number above with your WhatsApp number -->
+            💬 Enroll via WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!--
+        TRAINING IMAGE:
+        Rename to: training-photo.jpg | Size: 700×500px
+        Replace this placeholder div with:
+        <div class="training-image-wrap">
+          <img src="images/training-photo.jpg" alt="GT Arsenals Training Session" style="border-radius: 20px;" />
+        </div>
+      -->
+      <div class="training-image-wrap">
+        <div class="img-placeholder training-img-placeholder">
+          <div class="placeholder-inner">
+            <span class="placeholder-icon">📸</span>
+            <p>Add training photo</p>
+            <code>training-photo.jpg</code><br />
+            <small>700×500px recommended</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ GADGETS / SHOP ════════════════════════════════════════ -->
+  <section class="shop section" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Store</span>
+        <h2>Gadgets & Hardware</h2>
+        <p>Quality tech products available in-store and for delivery within Abuja. WhatsApp us for current stock and prices.</p>
+      </div>
+
+      <div class="shop-grid">
+        <!-- Product cards: rename images as shown in comments below -->
+        <div class="product-card">
+          <div class="product-img-wrap img-placeholder">
+            <!-- Rename image to: product-laptop.jpg -->
+            <div class="placeholder-inner"><span class="placeholder-icon">📸</span><code>product-laptop.jpg</code></div>
+          </div>
+          <div class="product-info">
+            <h4>Laptops & Notebooks</h4>
+            <p>New and fairly-used laptops from top brands. All tested and verified.</p>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27m%20interested%20in%20a%20laptop" class="btn btn-sm btn-whatsapp" target="_blank" rel="noopener">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap img-placeholder">
+            <!-- Rename image to: product-accessories.jpg -->
+            <div class="placeholder-inner"><span class="placeholder-icon">📸</span><code>product-accessories.jpg</code></div>
+          </div>
+          <div class="product-info">
+            <h4>Accessories & Peripherals</h4>
+            <p>Keyboards, mice, monitors, headsets, cables, and more.</p>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27m%20interested%20in%20accessories" class="btn btn-sm btn-whatsapp" target="_blank" rel="noopener">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap img-placeholder">
+            <!-- Rename image to: product-networking.jpg -->
+            <div class="placeholder-inner"><span class="placeholder-icon">📸</span><code>product-networking.jpg</code></div>
+          </div>
+          <div class="product-info">
+            <h4>Networking Equipment</h4>
+            <p>Routers, switches, access points, structured cabling and more.</p>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%27m%20interested%20in%20networking%20equipment" class="btn btn-sm btn-whatsapp" target="_blank" rel="noopener">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap img-placeholder">
+            <!-- Rename image to: product-custom-pc.jpg -->
+            <div class="placeholder-inner"><span class="placeholder-icon">📸</span><code>product-custom-pc.jpg</code></div>
+          </div>
+          <div class="product-info">
+            <h4>Custom Built PCs</h4>
+            <p>Desktops assembled to your exact specification. Gaming to workstations.</p>
+            <a href="https://wa.me/2347071188890?text=Hi,%20I%20want%20a%20custom%20PC" class="btn btn-sm btn-whatsapp" target="_blank" rel="noopener">Inquire on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CLIENT LOGOS ══════════════════════════════════════════
+       Research finding: B2B trust signal #1 for Nigerian clients.
+       Add logos of schools, businesses, organizations you've worked with.
+       Rename files: client-[name].png | Size: 120×40px grayscale PNG
+  ════════════════════════════════════════════════════════════════ -->
+  <div class="clients">
+    <div class="container">
+      <p class="clients-label">Trusted by businesses & organizations across FCT</p>
+      <div class="clients-grid">
+        <!-- Replace each .client-logo div with an <img> tag when you have logos -->
+        <div class="client-logo">client-name.png</div>
+        <div class="client-logo">client-name.png</div>
+        <div class="client-logo">client-name.png</div>
+        <div class="client-logo">client-name.png</div>
+        <div class="client-logo">client-name.png</div>
+        <div class="client-logo">client-name.png</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ WHY CHOOSE US ════════════════════════════════════════ -->
+  <section class="why-us section">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag" style="background:rgba(30,95,185,0.3);color:#5b9de8;">Why GT Arsenals</span>
+        <h2>Why Choose Us?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up">
+          <div class="why-icon">🏛️</div>
+          <h4>Officially Registered</h4>
+          <p>CAC registered company (RC: 8340467). You're dealing with a legitimate Nigerian business — not a freelancer.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="why-icon">⚡</div>
+          <h4>Fast Turnaround</h4>
+          <p>We value your time. Quick diagnoses, swift repairs, and prompt project delivery — always on schedule.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="why-icon">💡</div>
+          <h4>Expert Team</h4>
+          <p>Skilled professionals with hands-on experience. We don't guess — we diagnose, plan, and execute correctly.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="why-icon">💰</div>
+          <h4>Affordable Pricing</h4>
+          <p>Premium quality at fair Nigerian prices. Transparent quotes with no hidden fees or surprise charges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TEAM ══════════════════════════════════════════════════
+       Research finding: Showing real faces builds trust significantly
+       in the Nigerian market. Add team photos when available.
+       Rename files: team-firstname.jpg | Size: 300×300px square
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="team section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The People</span>
+        <h2>Meet Our Team</h2>
+        <p>Real people, real expertise. The professionals behind GT Arsenals.</p>
+      </div>
+      <div class="team-grid">
+
+        <!-- Team Member 1 — Replace placeholder with: <img src="images/team-firstname.jpg" alt="Name"> -->
+        <div class="team-card" data-aos="fade-up">
+          <div class="team-photo-wrap img-placeholder">
+            <div class="placeholder-inner" style="min-height:unset;">
+              <span class="placeholder-icon" style="font-size:1.5rem;">📸</span>
+              <code style="font-size:0.7rem;">team-member1.jpg</code>
+            </div>
+          </div>
+          <h4>Team Member Name</h4>
+          <div class="team-role">Founder / CEO</div>
+          <p>Brief bio — area of expertise and passion for technology.</p>
+        </div>
+
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-photo-wrap img-placeholder">
+            <div class="placeholder-inner" style="min-height:unset;">
+              <span class="placeholder-icon" style="font-size:1.5rem;">📸</span>
+              <code style="font-size:0.7rem;">team-member2.jpg</code>
+            </div>
+          </div>
+          <h4>Team Member Name</h4>
+          <div class="team-role">Lead IT Engineer</div>
+          <p>Networking, cybersecurity, and systems administration specialist.</p>
+        </div>
+
+        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-photo-wrap img-placeholder">
+            <div class="placeholder-inner" style="min-height:unset;">
+              <span class="placeholder-icon" style="font-size:1.5rem;">📸</span>
+              <code style="font-size:0.7rem;">team-member3.jpg</code>
+            </div>
+          </div>
+          <h4>Team Member Name</h4>
+          <div class="team-role">Software Developer</div>
+          <p>Full-stack developer building websites and business applications.</p>
+        </div>
+
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-photo-wrap img-placeholder">
+            <div class="placeholder-inner" style="min-height:unset;">
+              <span class="placeholder-icon" style="font-size:1.5rem;">📸</span>
+              <code style="font-size:0.7rem;">team-member4.jpg</code>
+            </div>
+          </div>
+          <h4>Team Member Name</h4>
+          <div class="team-role">Training Coordinator</div>
+          <p>Manages skill acquisition programs and ensures students succeed.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TESTIMONIALS ══════════════════════════════════════════ -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Client Reviews</span>
+        <h2>What Our Clients Say</h2>
+        <p>Real feedback from clients we've served across Abuja and beyond.</p>
+      </div>
+      <div class="testimonials-grid">
+        <!-- Replace with real testimonials as you collect them -->
+        <div class="testimonial-card" data-aos="fade-up">
+          <div class="stars">★★★★★</div>
+          <p>"GT Arsenals fixed my laptop the same day. Fast, affordable, and very professional. I'll always come back here."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AO</div>
+            <div><strong>Adaeze O.</strong><span>Wuse, Abuja</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="stars">★★★★★</div>
+          <p>"They set up our entire office network flawlessly. Professional team, great communication throughout the project."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MK</div>
+            <div><strong>Mohammed K.</strong><span>Business Owner, FCT</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="stars">★★★★★</div>
+          <p>"The cybersecurity training changed my career. Hands-on, practical, and worth every naira. Highly recommend."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CI</div>
+            <div><strong>Chidi I.</strong><span>IT Student, Abuja</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ GALLERY / PORTFOLIO ════════════════════════════════════
+       Add real photos of your office, team, training sessions,
+       repair work, and completed projects here.
+       
+       HOW TO REPLACE PLACEHOLDERS WITH REAL PHOTOS:
+       1. Take your photos (phone camera is fine — good lighting matters)
+       2. Resize to 700×480px (use Canva.com free tool)
+       3. Rename files exactly as shown in each <code> tag
+       4. Place files in the /images/ folder
+       5. Replace each placeholder <div> block with an <img> tag:
+          <img src="images/gallery-office.jpg" alt="GT Arsenals Office" />
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section gallery-section" style="background:var(--gray-100);" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Work</span>
+        <h2>See Us in Action</h2>
+        <p>A look inside our office, training sessions, and the work we do for clients every day in Abuja.</p>
+      </div>
+      <div class="gallery-grid">
+
+        <div class="gallery-item gallery-item--large" data-aos="fade-up">
+          <!-- Rename your file to: gallery-office.jpg | Size: 700×480px -->
+          <div class="img-placeholder gallery-ph"><div class="placeholder-inner">
+            <span class="placeholder-icon">📸</span>
+            <p>Office / workspace</p><code>gallery-office.jpg</code>
+          </div></div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+          <!-- gallery-training.jpg | 700×480px -->
+          <div class="img-placeholder gallery-ph"><div class="placeholder-inner">
+            <span class="placeholder-icon">📸</span>
+            <p>Training session</p><code>gallery-training.jpg</code>
+          </div></div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
+          <!-- gallery-repair.jpg | 700×480px -->
+          <div class="img-placeholder gallery-ph"><div class="placeholder-inner">
+            <span class="placeholder-icon">📸</span>
+            <p>Repair / tech work</p><code>gallery-repair.jpg</code>
+          </div></div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+          <!-- gallery-team.jpg | 700×480px -->
+          <div class="img-placeholder gallery-ph"><div class="placeholder-inner">
+            <span class="placeholder-icon">📸</span>
+            <p>Team / staff</p><code>gallery-team.jpg</code>
+          </div></div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
+          <!-- gallery-networking.jpg | 700×480px -->
+          <div class="img-placeholder gallery-ph"><div class="placeholder-inner">
+            <span class="placeholder-icon">📸</span>
+            <p>Networking setup</p><code>gallery-networking.jpg</code>
+          </div></div>
+        </div>
+
+        <div class="gallery-item gallery-item--large" data-aos="fade-up" data-aos-delay="200">
+          <!-- gallery-project.jpg | 700×480px -->
+          <div class="img-placeholder gallery-ph"><div class="placeholder-inner">
+            <span class="placeholder-icon">📸</span>
+            <p>Client project / event</p><code>gallery-project.jpg</code>
+          </div></div>
+        </div>
+
+      </div><!-- end gallery-grid -->
+    </div>
+  </section>
+
+
+  <!-- ═══ FAQ ═══════════════════════════════════════════════════ -->
+  <section class="faq section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQs</span>
+        <h2>Common Questions</h2>
+        <p>Answers to things clients ask us most.</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is GT Arsenals a registered company?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. GT Arsenals Ltd is fully registered with the Corporate Affairs Commission (CAC) of Nigeria. Our RC Number is 8340467, registered on March 14, 2025. You can verify us on the CAC portal at https://search.cac.gov.ng.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Where are you located?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We are based in Old Secretariat, Garki 1, Abuja, FCT. <!-- Update with your full address when ready --> Contact us via WhatsApp or the form below to get our exact office location and directions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you offer home or office visits for repairs?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we can come to you. We offer on-site IT support and repairs within Abuja. A travel fee may apply depending on your location. Contact us to arrange a visit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does it take to fix a laptop?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Most software issues and minor hardware repairs are completed same-day or within 24 hours. More complex hardware repairs (e.g., motherboard replacements) may take 2–5 business days depending on parts availability. We always give you a clear timeline before starting.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What courses do you offer in your training program?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We offer practical, hands-on courses in: Computer Basics, Networking & System Administration, Cybersecurity, Web Design & Development, Graphics Design, and Hardware Maintenance. See our <a href="pages/training.html" style="color: var(--blue);">Training Page</a> for full details, schedules, and fees.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you deliver gadgets outside Abuja?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Currently our primary delivery zone is within Abuja FCT. For clients outside Abuja, we can arrange courier delivery via GIG Logistics or similar services. Contact us for pricing and arrangements.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CONTACT ═══════════════════════════════════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container contact-inner">
+
+      <div class="contact-info">
+        <span class="section-tag">Reach Us</span>
+        <h2>Get In Touch</h2>
+        <p>Ready to get started? Send us a message and we'll respond within 24 hours. For urgent inquiries, WhatsApp is fastest.</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <!-- Update with your real branded email -->
+              <a href="mailto:info@gtarsenals.com">info@gtarsenals.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <div>
+              <strong>Phone / WhatsApp</strong>
+              <!-- Replace with your real phone number -->
+              <a href="tel:+2347071188890">+234 707 118 8890</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Office Location</strong>
+              <!-- Replace with your full FCT address -->
+              <span>Old Secretariat, Garki 1, Abuja, FCT</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🕐</span>
+            <div>
+              <strong>Business Hours</strong>
+              <span>Monday – Saturday: 8:00 AM – 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social links: replace # with real URLs -->
+        <div class="social-links">
+          <a href="#" class="social-btn" target="_blank" rel="noopener">📘 Facebook</a>
+          <a href="#" class="social-btn" target="_blank" rel="noopener">📷 Instagram</a>
+          <a href="#" class="social-btn" target="_blank" rel="noopener">🐦 Twitter/X</a>
+          <a href="https://wa.me/2347071188890" class="social-btn whatsapp-btn" target="_blank" rel="noopener">💬 WhatsApp</a>
+
+      <!-- Google Maps embed — shows your Garki 1 office location -->
+      <!-- ══════════════════════════════════════════════════════════
+           HOW TO UPDATE THE MAP:
+           1. Go to https://maps.google.com
+           2. Search: "Old Secretariat Garki 1 Abuja"
+           3. Click Share → Embed a map → Copy HTML
+           4. Replace the entire <iframe> below with the one you copied
+           The current iframe shows a general Garki 1 area pin.
+      ══════════════════════════════════════════════════════════ -->
+      <div class="map-wrap" style="margin-top:32px; border-radius:16px; overflow:hidden; border:1px solid var(--gray-200);">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8!2d7.4912!3d9.0573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0ba6a84e9e7b%3A0x0!2sOld+Secretariat%2C+Garki+1%2C+Abuja!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
+          width="100%"
+          height="240"
+          style="border:0; display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="GT Arsenals Ltd office location — Old Secretariat, Garki 1, Abuja">
+        </iframe>
+      </div>
+
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form" id="contactForm" novalidate>
+        <h3>Send a Message</h3>
+
+        <!-- Honeypot field — hidden from humans, catches bots -->
+        <div style="display:none;" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone / WhatsApp</label>
+          <input type="tel" id="phone" name="phone" placeholder="+234 707 118 8890" autocomplete="tel" />
+        </div>
+        <div class="form-group">
+          <label for="service">Service Interested In</label>
+          <select id="service" name="service">
+            <option value="">— Select a service —</option>
+            <option>Gadgets & Hardware Sales</option>
+            <option>IT Services & Networking</option>
+            <option>Cybersecurity</option>
+            <option>Software Development</option>
+            <option>PC Assembly</option>
+            <option>Computer Repairs</option>
+            <option>Graphics Design</option>
+            <option>Training & Skill Acquisition</option>
+            <option>General Contracts / Procurement</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or what you need help with..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary full-width">Send Message →</button>
+        <div class="form-status" id="formStatus" role="alert"></div>
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+  <!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-placeholder footer-logo">
+          <span class="logo-icon">GT</span>
+          <span class="logo-text">ARSENALS <em>LTD</em></span>
+        </div>
+        <p>Your complete technology partner in Abuja, FCT. CAC Registered with the Corporate Affairs Commission of Nigeria. Serving individuals, startups, and businesses.</p>
+        <p class="rc-note">RC: 8340467 &nbsp;|&nbsp; Est. March 2025</p>
+        <p style="margin-top:16px;">
+          <a href="#" aria-label="Facebook" style="margin-right:14px;font-size:1.1rem;">📘</a>
+          <a href="#" aria-label="Instagram" style="margin-right:14px;font-size:1.1rem;">📷</a>
+          <a href="#" aria-label="LinkedIn" style="margin-right:14px;font-size:1.1rem;">💼</a>
+          <a href="https://wa.me/2347071188890" aria-label="WhatsApp" style="font-size:1.1rem;">💬</a>
+        </p>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/training.html">Training</a></li>
+          <li><a href="pages/pricing.html">Pricing</a></li>
+          <li><a href="pages/blog.html">Blog</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="pages/privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-services">
+        <h5>Services</h5>
+        <ul>
+          <li>IT Services &amp; Networking</li>
+          <li>Cybersecurity</li>
+          <li>Software Development</li>
+          <li>PC Assembly</li>
+          <li>Computer Repairs</li>
+          <li>Graphics Design</li>
+          <li>Training &amp; Skills</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Contact Us</h5>
+        <p>📧 <a href="mailto:info@gtarsenals.com">info@gtarsenals.com</a></p>
+        <p>📱 <a href="tel:+2347071188890">+234 707 118 8890</a></p>
+        <p>📍 Old Secretariat, Garki 1, Abuja, FCT</p>
+        <p>🕐 Mon – Sat &nbsp; 8am – 6pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span class="footer-year"></span> GT Arsenals Ltd. All rights reserved.</p>
+        <p>
+          <a href="pages/privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+          Built by GT Arsenals
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══ FLOATING WHATSAPP BUTTON ══════════════════════════════
+       Research finding: Nigerian clients use this constantly.
+       Replace the number in the href below with your real WhatsApp number.
+  ════════════════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/2347071188890?text=Hello%20GT%20Arsenals%2C%20I%20need%20help%20with..."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp">
+    💬
+    <span class="wa-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

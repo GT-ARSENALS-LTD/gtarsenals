@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GT Arsenals Blog — Tech tips, cybersecurity advice, gadget guides, and IT insights for Nigerian individuals and businesses in Abuja." />
+  <meta name="keywords" content="tech tips Nigeria, cybersecurity Abuja, laptop buying guide Nigeria, IT blog Abuja, computer tips Nigeria" />
+  <title>Blog & Resources | GT Arsenals Ltd — Tech Tips for Nigerians</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Open Graph for social sharing -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="GT Arsenals Blog — Tech Tips for Nigerian Businesses" />
+  <meta property="og:description" content="Cybersecurity advice, IT tips, buying guides, and tech insights written for Nigerian individuals and businesses in Abuja." />
+  <meta property="og:image"       content="https://gtarsenals.com/images/og-banner.jpg" />
+  <meta property="og:url"         content="https://gtarsenals.com/pages/blog.html" />
+  <meta property="og:site_name"   content="GT Arsenals Ltd" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="canonical" href="https://gtarsenals.com/pages/blog.html" />
+
+  <style>
+    /* ── Blog grid layout ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    /* ── Individual blog card ── */
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--blue);
+    }
+
+    /* ── Blog card image area ── */
+    .blog-img-wrap {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    .blog-img-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .blog-card:hover .blog-img-wrap img { transform: scale(1.05); }
+
+    /* Image placeholder for blog posts without real photos yet */
+    .blog-img-placeholder {
+      width: 100%; height: 200px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 8px;
+      font-size: 0.78rem; font-weight: 600;
+      border-radius: 0;
+      border: none;
+    }
+    .blog-img-placeholder .placeholder-icon { font-size: 2rem; }
+
+    /* ── Blog card body ── */
+    .blog-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+
+    .blog-meta {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 12px; flex-wrap: wrap;
+    }
+    .blog-category {
+      display: inline-block;
+      background: var(--blue-pale); color: var(--blue);
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 100px;
+    }
+    .blog-date {
+      font-size: 0.76rem; color: var(--gray-400); font-weight: 500;
+    }
+    .blog-read-time {
+      font-size: 0.76rem; color: var(--gray-400);
+    }
+
+    .blog-body h2 {
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--black); margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .blog-body p {
+      font-size: 0.88rem; color: var(--gray-600);
+      line-height: 1.7; margin-bottom: 20px; flex: 1;
+    }
+    .blog-read-link {
+      font-size: 0.85rem; font-weight: 700;
+      color: var(--blue);
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: gap var(--transition);
+    }
+    .blog-read-link:hover { gap: 10px; }
+
+    /* ── Featured post (first post, spans full width) ── */
+    .blog-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+    }
+    .blog-card.featured .blog-img-wrap { width: 45%; height: auto; min-height: 280px; flex-shrink: 0; }
+    .blog-card.featured .blog-body { padding: 36px; }
+    .blog-card.featured .blog-body h2 { font-size: 1.4rem; }
+
+    /* ── Category filter tabs ── */
+    .blog-filters {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .filter-btn {
+      padding: 9px 20px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 100px;
+      background: var(--white);
+      font-family: var(--font);
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+    }
+
+    /* ── Newsletter signup strip ── */
+    .newsletter {
+      background: var(--blue-pale);
+      border: 1px solid var(--blue);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      text-align: center;
+      margin-top: 72px;
+    }
+    .newsletter h3 { font-size: 1.5rem; font-weight: 800; color: var(--black); margin-bottom: 10px; }
+    .newsletter p  { color: var(--gray-600); margin-bottom: 28px; }
+    .newsletter-form {
+      display: flex; gap: 12px; max-width: 480px; margin: 0 auto;
+      flex-wrap: wrap; justify-content: center;
+    }
+    .newsletter-form input {
+      flex: 1; min-width: 220px;
+      padding: 13px 18px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius);
+      font-family: var(--font); font-size: 0.92rem;
+      outline: none;
+    }
+    .newsletter-form input:focus { border-color: var(--blue); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .blog-card.featured { flex-direction: column; grid-column: auto; }
+      .blog-card.featured .blog-img-wrap { width: 100%; height: 200px; }
+      .newsletter { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" id="annBar">
+    🎓 New Training Cohort Starting Soon! <a href="training.html">Enroll Now →</a>
+    <button class="close-bar" id="closeBar">×</button>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar always-white" id="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo-placeholder">
+        <span class="logo-icon">GT</span>
+        <span class="logo-text" style="color:var(--black);">ARSENALS <em>LTD</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="services.html">Services</a>
+        <a href="training.html">Training</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="../index.html#shop">Shop</a>
+        <a href="about.html">About</a>
+        <a href="blog.html" style="color:var(--blue);">Blog</a>
+        <a href="../index.html#contact" class="nav-cta">Get a Quote</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a><span>›</span>
+        <span style="color:rgba(255,255,255,0.9);">Blog & Resources</span>
+      </div>
+      <h1>Blog & Resources</h1>
+      <p>Tech tips, cybersecurity advice, buying guides, and IT insights written for Nigerians — by Nigerians.</p>
+    </div>
+  </section>
+
+
+  <!-- Blog Content -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Category Filters -->
+      <div class="blog-filters">
+        <button class="filter-btn active" data-filter="all">All Posts</button>
+        <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
+        <button class="filter-btn" data-filter="buying-guides">Buying Guides</button>
+        <button class="filter-btn" data-filter="it-tips">IT Tips</button>
+        <button class="filter-btn" data-filter="training">Training</button>
+        <button class="filter-btn" data-filter="business-tech">Business Tech</button>
+      </div>
+
+      <div class="blog-grid">
+
+        <!-- ══ FEATURED POST ════════════════════════════════════
+             Replace this placeholder image with: blog-featured.jpg
+             Size: 900×600px
+        ═════════════════════════════════════════════════════════ -->
+        <article class="blog-card featured" data-aos="fade-up" data-category="cybersecurity">
+          <div class="blog-img-wrap">
+            <!--
+              When you have the image ready:
+              <img src="../images/blog-featured.jpg" alt="5 Signs Your Business Is Not Cyber Safe" />
+              Rename file to: blog-featured.jpg | Size: 900×600px
+            -->
+            <div class="blog-img-placeholder img-placeholder">
+              <div class="placeholder-inner">
+                <span class="placeholder-icon">📸</span>
+                <p>Featured image</p>
+                <code>blog-featured.jpg</code>
+              </div>
+            </div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">Cybersecurity</span>
+              <span class="blog-date">📅 Feb 2026</span>
+              <span class="blog-read-time">⏱ 5 min read</span>
+            </div>
+            <h2>5 Signs Your Business in Abuja Is Not Cyber-Safe (And How to Fix It)</h2>
+            <p>
+              Most Nigerian small businesses think cybercrime only happens to banks and big corporations.
+              The reality? SMEs are the biggest targets because they have the weakest defenses. Here are
+              5 warning signs your business is at risk — and practical steps you can take today, even on
+              a tight budget.
+            </p>
+            <!--
+              BLOG POST CONTENT:
+              Each blog card currently links to "#" as a placeholder.
+              When you're ready to write full articles, create individual HTML pages like:
+              /pages/blog/cybersecurity-warning-signs.html
+              Then update the href below to point to that file.
+            -->
+            <a href="blog/cybersecurity-warning-signs.html" class="blog-read-link">Read Full Article →</a>
+          </div>
+        </article>
+
+
+        <!-- ══ POST 2 ════════════════════════════════════════════
+             Rename image to: blog-laptop-guide.jpg | 600×400px
+        ═════════════════════════════════════════════════════════ -->
+        <article class="blog-card" data-aos="fade-up" data-category="buying-guides">
+          <div class="blog-img-wrap">
+            <div class="blog-img-placeholder img-placeholder">
+              <div class="placeholder-inner">
+                <span class="placeholder-icon">📸</span><code>blog-laptop-guide.jpg</code>
+              </div>
+            </div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">Buying Guides</span>
+              <span class="blog-date">📅 Jan 2026</span>
+              <span class="blog-read-time">⏱ 7 min read</span>
+            </div>
+            <h2>Best Laptops Under ₦400,000 in Nigeria (2026 Guide)</h2>
+            <p>Shopping for a laptop in Nigeria is confusing — too many options, fake specs online, and prices that change daily. We break down the best value laptops available in Abuja right now, by use case.</p>
+            <a href="blog/laptop-buying-guide.html" class="blog-read-link">Read Full Article →</a>
+          </div>
+        </article>
+
+
+        <!-- ══ POST 3 ════════════════════════════════════════════
+             Rename image to: blog-wifi-fix.jpg | 600×400px
+        ═════════════════════════════════════════════════════════ -->
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="100" data-category="it-tips">
+          <div class="blog-img-wrap">
+            <div class="blog-img-placeholder img-placeholder">
+              <div class="placeholder-inner">
+                <span class="placeholder-icon">📸</span><code>blog-wifi-fix.jpg</code>
+              </div>
+            </div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">IT Tips</span>
+              <span class="blog-date">📅 Jan 2026</span>
+              <span class="blog-read-time">⏱ 4 min read</span>
+            </div>
+            <h2>Why Your Office Wi-Fi Is Slow — And 6 Ways to Fix It Today</h2>
+            <p>Slow internet kills productivity. Before you call your ISP and spend hours on hold, try these 6 fixes that solve 80% of office Wi-Fi problems — most of them free.</p>
+            <a href="blog/slow-wifi-fixes.html" class="blog-read-link">Read Full Article →</a>
+          </div>
+        </article>
+
+
+        <!-- ══ POST 4 ════════════════════════════════════════════
+             Rename image to: blog-phishing.jpg | 600×400px
+        ═════════════════════════════════════════════════════════ -->
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="200" data-category="cybersecurity">
+          <div class="blog-img-wrap">
+            <div class="blog-img-placeholder img-placeholder">
+              <div class="placeholder-inner">
+                <span class="placeholder-icon">📸</span><code>blog-phishing.jpg</code>
+              </div>
+            </div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">Cybersecurity</span>
+              <span class="blog-date">📅 Dec 2025</span>
+              <span class="blog-read-time">⏱ 6 min read</span>
+            </div>
+            <h2>How Nigerian Scammers Use Fake Emails to Steal Business Data</h2>
+            <p>Phishing attacks targeting Nigerian businesses are up 300% since 2023. Learn to recognize the exact tricks scammers use — with real examples — and how to train your team to never fall for them.</p>
+            <a href="blog/phishing-scams-nigeria.html" class="blog-read-link">Read Full Article →</a>
+          </div>
+        </article>
+
+
+        <!-- ══ POST 5 ════════════════════════════════════════════
+             Rename image to: blog-it-career.jpg | 600×400px
+        ═════════════════════════════════════════════════════════ -->
+        <article class="blog-card" data-aos="fade-up" data-category="training">
+          <div class="blog-img-wrap">
+            <div class="blog-img-placeholder img-placeholder">
+              <div class="placeholder-inner">
+                <span class="placeholder-icon">📸</span><code>blog-it-career.jpg</code>
+              </div>
+            </div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">Training</span>
+              <span class="blog-date">📅 Dec 2025</span>
+              <span class="blog-read-time">⏱ 5 min read</span>
+            </div>
+            <h2>5 Tech Skills That Pay the Most in Nigeria Right Now (2026)</h2>
+            <p>The Nigerian tech job market is booming — but not all skills pay equally. We break down the top 5 in-demand skills, realistic income ranges, and how long it takes to learn each one.</p>
+            <a href="blog/tech-skills-that-pay-nigeria-2026.html" class="blog-read-link">Read Full Article →</a>
+          </div>
+        </article>
+
+
+        <!-- ══ POST 6 ════════════════════════════════════════════
+             Rename image to: blog-pc-slow.jpg | 600×400px
+        ═════════════════════════════════════════════════════════ -->
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="100" data-category="it-tips">
+          <div class="blog-img-wrap">
+            <div class="blog-img-placeholder img-placeholder">
+              <div class="placeholder-inner">
+                <span class="placeholder-icon">📸</span><code>blog-pc-slow.jpg</code>
+              </div>
+            </div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">IT Tips</span>
+              <span class="blog-date">📅 Nov 2025</span>
+              <span class="blog-read-time">⏱ 4 min read</span>
+            </div>
+            <h2>Your Laptop Is Slow — Upgrade RAM or Buy a New One?</h2>
+            <p>A slow laptop doesn't always mean it's time to spend ₦200k on a replacement. Here's a simple guide to diagnosing the real cause and deciding whether a RAM upgrade will save it.</p>
+            <a href="blog/ram-upgrade-or-new-laptop.html" class="blog-read-link">Read Full Article →</a>
+          </div>
+        </article>
+
+
+        <!-- ══ POST 7 ════════════════════════════════════════════
+             Rename image to: blog-website-business.jpg | 600×400px
+        ═════════════════════════════════════════════════════════ -->
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="200" data-category="business-tech">
+          <div class="blog-img-wrap">
+            <div class="blog-img-placeholder img-placeholder">
+              <div class="placeholder-inner">
+                <span class="placeholder-icon">📸</span><code>blog-website-business.jpg</code>
+              </div>
+            </div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-category">Business Tech</span>
+              <span class="blog-date">📅 Nov 2025</span>
+              <span class="blog-read-time">⏱ 6 min read</span>
+            </div>
+            <h2>Does Your Small Business in Abuja Really Need a Website in 2026?</h2>
+            <p>Short answer: yes. Long answer: here's exactly why, what type of website you need, and what happens to businesses in Nigeria that ignore their online presence.</p>
+            <a href="blog/does-your-business-need-a-website-2026.html" class="blog-read-link">Read Full Article →</a>
+          </div>
+        </article>
+
+      </div><!-- end blog-grid -->
+
+      <!-- No results message (shown by filter JS when no cards match) -->
+      <div id="filterNoResults" style="display:none;text-align:center;padding:56px 24px;">
+        <p style="font-size:1.1rem;color:var(--gray-400);">No articles in that category yet.<br><span style="font-size:0.88rem;">Check back soon — we publish new content every month.</span></p>
+        <button class="btn btn-outline" style="margin-top:20px;" onclick="document.querySelector('[data-filter=all]').click()">← Show All Articles</button>
+      </div>
+
+
+      <!-- Newsletter Signup -->
+      <div class="newsletter" data-aos="fade-up" id="newsletterForm">
+        <h3>📬 Get Tech Tips in Your Inbox</h3>
+        <p>Join other Nigerian business owners and tech lovers who receive our weekly IT tips, deals, and training updates.</p>
+        <div class="newsletter-form">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email address" aria-label="Email for newsletter" />
+          <button class="btn btn-primary" type="button" id="newsletterBtn">Subscribe Free</button>
+        </div>
+        <p id="newsletterMsg" style="font-size:0.82rem;margin-top:10px;margin-bottom:0;"></p>
+        <p style="font-size:0.76rem; color:var(--gray-400); margin-top:12px; margin-bottom:0;">
+          No spam. Unsubscribe any time. Read our <a href="privacy.html" style="color:var(--blue);">Privacy Policy</a>.
+        </p>
+        <!--
+          NEWSLETTER INTEGRATION:
+          To make this actually collect emails, use one of these free services:
+          - Mailchimp (mailchimp.com) — most popular, free up to 500 contacts
+          - Brevo / Sendinblue (brevo.com) — good free tier
+          Replace the button's onclick with the service's embed form action URL.
+        -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Need IT Help Right Now?</h2>
+      <p>Don't wait for a blog post. Contact us directly and we'll solve your problem today.</p>
+      <div class="cta-actions">
+        <a href="../index.html#contact" class="btn btn-outline">Send a Message</a>
+        <a href="https://wa.me/2347071188890?text=Hi%20GT%20Arsenals%2C%20I%20need%20IT%20help" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-placeholder footer-logo">
+          <span class="logo-icon">GT</span>
+          <span class="logo-text">ARSENALS <em>LTD</em></span>
+        </div>
+        <p>Your complete technology partner in Abuja, FCT. CAC Registered. Serving individuals, startups, and businesses across Nigeria.</p>
+        <p class="rc-note">RC: 8340467 &nbsp;|&nbsp; Est. March 2025</p>
+        <p style="margin-top:16px;">
+          <a href="#" aria-label="Facebook" style="margin-right:14px;font-size:1.1rem;">📘</a>
+          <a href="#" aria-label="Instagram" style="margin-right:14px;font-size:1.1rem;">📷</a>
+          <a href="#" aria-label="LinkedIn" style="margin-right:14px;font-size:1.1rem;">💼</a>
+          <a href="https://wa.me/2347071188890" aria-label="WhatsApp" style="font-size:1.1rem;">💬</a>
+        </p>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-services">
+        <h5>Services</h5>
+        <ul>
+          <li>IT Services &amp; Networking</li>
+          <li>Cybersecurity</li>
+          <li>Software Development</li>
+          <li>PC Assembly</li>
+          <li>Computer Repairs</li>
+          <li>Graphics Design</li>
+          <li>Training &amp; Skills</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Contact Us</h5>
+        <p>📧 <a href="mailto:info@gtarsenals.com">info@gtarsenals.com</a></p>
+        <p>📱 <a href="tel:+2347071188890">+234 707 118 8890</a></p>
+        <p>📍 Old Secretariat, Garki 1, Abuja, FCT</p>
+        <p>🕐 Mon – Sat &nbsp; 8am – 6pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span class="footer-year"></span> GT Arsenals Ltd. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; Built by GT Arsenals</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2347071188890?text=Hello%20GT%20Arsenals%2C%20I%20need%20help%20with..."
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    💬<span class="wa-tooltip">Chat on WhatsApp</span>
+  </a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // ── Blog category filter ─────────────────────────────────────
+    (function () {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const allCards   = document.querySelectorAll('.blog-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          // Update active state
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          let visibleCount = 0;
+
+          allCards.forEach(card => {
+            const cat = card.getAttribute('data-category') || 'uncategorised';
+            const match = (filter === 'all' || cat === filter);
+            if (match) {
+              card.style.display   = '';
+              card.style.opacity   = '1';
+              card.style.transform = 'translateY(0)';
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          // Show "no results" message if nothing matches
+          const noResults = document.getElementById('filterNoResults');
+          if (noResults) noResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

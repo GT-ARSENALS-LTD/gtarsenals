@@ -1,0 +1,2 @@
+ADD YOUR IMAGES TO THIS FOLDER.
+See README.md for the full naming guide with exact filenames and sizes.

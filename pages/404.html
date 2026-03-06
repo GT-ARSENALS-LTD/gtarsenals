@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Page Not Found | GT Arsenals Ltd</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    /* Full-page centered layout */
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 24px;
+      background: linear-gradient(135deg, #050d1f 0%, #0c2354 50%, #1E5FB9 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative grid overlay */
+    .error-page::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 56px 56px;
+      pointer-events: none;
+    }
+
+    .error-content {
+      position: relative; z-index: 1;
+      max-width: 580px;
+      animation: fadeInUp 0.8s ease both;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* The big "404" number */
+    .error-number {
+      font-size: clamp(5rem, 18vw, 10rem);
+      font-weight: 900;
+      color: transparent;
+      background: linear-gradient(135deg, #5b9de8, #1E5FB9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -0.04em;
+    }
+
+    /* Glitch animation on the 404 */
+    .error-number {
+      animation: glitch 4s infinite;
+    }
+    @keyframes glitch {
+      0%, 92%, 100% { transform: translate(0); filter: none; }
+      93% { transform: translate(-3px, 1px); filter: hue-rotate(30deg); }
+      94% { transform: translate(3px, -1px); filter: hue-rotate(-30deg); }
+      95% { transform: translate(0); filter: none; }
+      96% { transform: translate(2px, 2px); }
+      97% { transform: translate(-2px, -1px); }
+      98% { transform: translate(0); }
+    }
+
+    .error-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    .error-content h1 {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .error-content p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    /* Action buttons */
+    .error-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    /* Quick links grid */
+    .quick-links-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+    }
+    .quick-links-grid {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .quick-link {
+      padding: 8px 18px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      transition: var(--transition);
+    }
+    .quick-link:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    /* Small logo at top */
+    .error-logo {
+      position: absolute;
+      top: 28px; left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1;
+    }
+    .error-logo .logo-icon { background: rgba(255,255,255,0.15); }
+    .error-logo .logo-text { color: var(--white); }
+
+    /* Auto-redirect countdown */
+    .redirect-note {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 28px;
+    }
+    .countdown { color: rgba(255,255,255,0.6); font-weight: 700; }
+
+    @media (max-width: 480px) {
+      .error-actions { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="error-page">
+
+    <!-- Logo -->
+    <a href="../index.html" class="error-logo logo-placeholder" aria-label="GT Arsenals Home">
+      <span class="logo-icon">GT</span>
+      <span class="logo-text">ARSENALS <em>LTD</em></span>
+    </a>
+
+    <div class="error-content">
+      <div class="error-number">404</div>
+      <span class="error-icon">🔍</span>
+      <h1>Page Not Found</h1>
+      <p>
+        Looks like this page took a wrong turn at Garki Junction.<br />
+        The page you're looking for doesn't exist, was moved, or the link is broken.
+      </p>
+
+      <div class="error-actions">
+        <a href="../index.html" class="btn btn-primary">← Go Back Home</a>
+        <a href="https://wa.me/2347071188890?text=Hi%20GT%20Arsenals%2C%20I%20was%20looking%20for%20something%20on%20your%20website" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          💬 Chat With Us
+        </a>
+      </div>
+
+      <p class="quick-links-label">Or go directly to</p>
+      <div class="quick-links-grid">
+        <a href="services.html"  class="quick-link">Services</a>
+        <a href="training.html"  class="quick-link">Training</a>
+        <a href="pricing.html"   class="quick-link">Pricing</a>
+        <a href="blog.html"      class="quick-link">Blog</a>
+        <a href="about.html"     class="quick-link">About Us</a>
+        <a href="../index.html#contact" class="quick-link">Contact</a>
+      </div>
+
+      <p class="redirect-note">
+        Redirecting you to the homepage in <span class="countdown" id="countdown">10</span> seconds...
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    // Auto-redirect countdown
+    let seconds = 10;
+    const countEl = document.getElementById('countdown');
+    const timer = setInterval(() => {
+      seconds--;
+      if (countEl) countEl.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = '../index.html';
+      }
+    }, 1000);
+
+    // Cancel redirect if user interacts with the page
+    document.addEventListener('click', () => clearInterval(timer), { once: true });
+    document.addEventListener('keydown', () => clearInterval(timer), { once: true });
+  </script>
+</body>
+</html>

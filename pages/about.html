@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About GT Arsenals Ltd — CAC registered IT company in Abuja, FCT. Our story, mission, team, and company values." />
+  <title>About Us | GT Arsenals Ltd — Abuja, FCT</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="canonical" href="https://gtarsenals.com/pages/about.html" />
+
+  <style>
+    .mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+    .mission-card { padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); background: var(--white); }
+    .mission-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; }
+    .mission-card p  { font-size: 0.9rem; color: var(--gray-600); line-height: 1.75; }
+    .mission-icon { font-size: 2rem; margin-bottom: 14px; }
+    .timeline { max-width: 680px; margin: 0 auto; }
+    .timeline-item { display: flex; gap: 24px; margin-bottom: 36px; }
+    .timeline-dot {
+      width: 16px; height: 16px; flex-shrink: 0;
+      background: var(--blue); border-radius: 50%; margin-top: 4px;
+      position: relative;
+    }
+    .timeline-dot::after {
+      content: ''; position: absolute; top: 16px; left: 50%;
+      transform: translateX(-50%); width: 2px;
+      height: calc(100% + 20px); background: var(--blue-pale);
+    }
+    .timeline-item:last-child .timeline-dot::after { display: none; }
+    .timeline-content h4 { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; color: var(--black); }
+    .timeline-content p  { font-size: 0.87rem; color: var(--gray-600); line-height: 1.7; }
+    .timeline-date { font-size: 0.75rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+    .value-card { text-align: center; padding: 28px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); }
+    .value-icon { font-size: 2rem; margin-bottom: 12px; }
+    .value-card h4 { color: var(--white); font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+    .value-card p  { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar" id="annBar">
+    🎓 New Training Cohort Starting Soon! <a href="training.html">Enroll Now →</a>
+    <button class="close-bar" id="closeBar">×</button>
+  </div>
+
+  <header class="navbar always-white" id="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo-placeholder">
+        <span class="logo-icon">GT</span>
+        <span class="logo-text" style="color:var(--black);">ARSENALS <em>LTD</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="services.html">Services</a>
+        <a href="training.html">Training</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="blog.html">Blog</a>
+        <a href="../index.html#shop">Shop</a>
+        <a href="about.html" style="color:var(--blue);">About</a>
+        <a href="../index.html#contact" class="nav-cta">Get a Quote</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,0.9);">About Us</span></div>
+      <h1>About GT Arsenals Ltd</h1>
+      <p>A proudly Nigerian technology company built to empower individuals and businesses through quality IT solutions.</p>
+    </div>
+  </section>
+
+
+  <!-- Who We Are -->
+  <section class="about section">
+    <div class="container about-inner">
+      <div class="about-image-wrap">
+        <!--
+          ABOUT IMAGE: Rename your office or team photo to: about-photo.jpg
+          Size: 600×700px
+          Replace this placeholder with:
+          <img src="../images/about-photo.jpg" alt="GT Arsenals Office" style="border-radius:20px;width:100%;" />
+        -->
+        <div class="img-placeholder about-img-placeholder">
+          <div class="placeholder-inner">
+            <span class="placeholder-icon">📸</span>
+            <p>Add office/team photo</p>
+            <code>about-photo.jpg</code>
+            <small>600×700px recommended</small>
+          </div>
+        </div>
+        <div class="about-badge"><span class="badge-year">Est.</span><span class="badge-num">2025</span></div>
+      </div>
+
+      <div class="about-text">
+        <span class="section-tag">Our Story</span>
+        <h2>Who We Are</h2>
+        <p>GT Arsenals Ltd is a privately registered Nigerian technology company based in Abuja, the Federal Capital Territory. We were founded in 2025 with a clear mission: to make quality technology services accessible, affordable, and reliable for every Nigerian — whether you're an individual, a small business, a startup, or a large organization.</p>
+        <p>From our base in Abuja, we serve clients across FCT and beyond, offering a comprehensive range of services from hardware sales and IT support to software development, cybersecurity, and hands-on skills training.</p>
+        <p>We believe Nigeria's future is digital, and GT Arsenals exists to play a meaningful role in making that future a reality — one client, one project, and one trained individual at a time.</p>
+        <div class="about-details">
+          <div class="detail-item"><span class="detail-label">Company Name</span><span class="detail-value">GT Arsenals Ltd</span></div>
+          <div class="detail-item"><span class="detail-label">RC Number</span><span class="detail-value">8340467</span></div>
+          <div class="detail-item"><span class="detail-label">Type</span><span class="detail-value">Private Ltd (Shares)</span></div>
+          <div class="detail-item"><span class="detail-label">Registered</span><span class="detail-value">March 14, 2025</span></div>
+          <div class="detail-item"><span class="detail-label">Location</span><span class="detail-value">Old Secretariat, Garki 1, Abuja, FCT</span></div>
+          <div class="detail-item"><span class="detail-label">Status</span><span class="detail-value status-active">● Active</span></div>
+        </div>
+        <a href="../index.html#contact" class="btn btn-primary">Work With Us</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Mission, Vision, Goals -->
+  <section class="section" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Direction</span>
+        <h2>Mission, Vision & Goals</h2>
+      </div>
+      <div class="mission-grid">
+        <div class="mission-card" data-aos="fade-up">
+          <div class="mission-icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>To deliver comprehensive, affordable, and reliable technology solutions that empower Nigerian individuals and businesses to thrive in an increasingly digital world.</p>
+        </div>
+        <div class="mission-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="mission-icon">🚀</div>
+          <h3>Our Vision</h3>
+          <p>To become the most trusted technology partner for individuals and businesses across Nigeria — known for quality, integrity, and measurable impact.</p>
+        </div>
+        <div class="mission-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="mission-icon">🌍</div>
+          <h3>Our Goal</h3>
+          <p>To train 1,000+ Nigerians in digital skills, serve 5,000+ clients, and expand GT Arsenals' presence across major Nigerian cities by 2030.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Our Values -->
+  <section class="section" style="background: var(--black);">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag" style="background:rgba(30,95,185,0.3);color:#5b9de8;">What Drives Us</span>
+        <h2>Our Values</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card" data-aos="fade-up"><div class="value-icon">🤝</div><h4>Integrity</h4><p>We're honest about what we can and cannot do. No over-promising, no cutting corners.</p></div>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="80"><div class="value-icon">💡</div><h4>Excellence</h4><p>We hold ourselves to the highest professional standards in every project and service.</p></div>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="160"><div class="value-icon">🇳🇬</div><h4>Nigerian Pride</h4><p>We are building a globally standard Nigerian tech company — and we're proud of it.</p></div>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="240"><div class="value-icon">📈</div><h4>Growth</h4><p>We invest in our team, our clients, and our community to grow sustainably and purposefully.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Team Section -->
+  <section class="team section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The People</span>
+        <h2>Meet Our Team</h2>
+        <p>The skilled professionals behind GT Arsenals. Real people, real expertise.</p>
+      </div>
+      <div class="team-grid">
+        <!--
+          TEAM PHOTOS: Rename files to team-firstname.jpg
+          Size: 300×300px (square, face centered)
+          Replace placeholder divs with:
+          <img src="../images/team-firstname.jpg" alt="Name" />
+        -->
+        <div class="team-card" data-aos="fade-up">
+          <div class="team-photo-wrap img-placeholder" style="min-height:160px;">
+            <div class="placeholder-inner" style="min-height:unset;"><span class="placeholder-icon" style="font-size:1.4rem;">📸</span><code style="font-size:0.68rem;">team-member1.jpg</code></div>
+          </div>
+          <h4>Team Member Name</h4>
+          <div class="team-role">Founder & CEO</div>
+          <p>Visionary leader with a passion for making technology accessible to all Nigerians.</p>
+        </div>
+
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-photo-wrap img-placeholder" style="min-height:160px;">
+            <div class="placeholder-inner" style="min-height:unset;"><span class="placeholder-icon" style="font-size:1.4rem;">📸</span><code style="font-size:0.68rem;">team-member2.jpg</code></div>
+          </div>
+          <h4>Team Member Name</h4>
+          <div class="team-role">Lead IT Engineer</div>
+          <p>Expert in networking, cybersecurity, and enterprise IT infrastructure.</p>
+        </div>
+
+        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-photo-wrap img-placeholder" style="min-height:160px;">
+            <div class="placeholder-inner" style="min-height:unset;"><span class="placeholder-icon" style="font-size:1.4rem;">📸</span><code style="font-size:0.68rem;">team-member3.jpg</code></div>
+          </div>
+          <h4>Team Member Name</h4>
+          <div class="team-role">Software Developer</div>
+          <p>Full-stack developer building custom digital solutions for Nigerian businesses.</p>
+        </div>
+
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-photo-wrap img-placeholder" style="min-height:160px;">
+            <div class="placeholder-inner" style="min-height:unset;"><span class="placeholder-icon" style="font-size:1.4rem;">📸</span><code style="font-size:0.68rem;">team-member4.jpg</code></div>
+          </div>
+          <h4>Team Member Name</h4>
+          <div class="team-role">Training Coordinator</div>
+          <p>Dedicated to empowering students with skills that lead to real income and careers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Timeline / Milestones -->
+  <section class="section" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Journey</span>
+        <h2>Key Milestones</h2>
+      </div>
+      <!-- Update with real dates and milestones as they happen -->
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">March 2025</div>
+            <h4>Company Founded</h4>
+            <p>GT Arsenals Ltd officially registered with the Corporate Affairs Commission (RC: 8340467). Operations begin in Abuja, FCT.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025</div>
+            <h4>First Clients Served</h4>
+            <p>Begin delivering IT services, repairs, and gadget sales to individuals and businesses across Abuja.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025</div>
+            <h4>Training Academy Launched</h4>
+            <p>GT Arsenals Training & Skill Acquisition program officially opens, empowering its first cohort of students.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2026</div>
+            <h4>Website Launched</h4>
+            <p>gtarsenals.com goes live, expanding our reach to clients across Nigeria and beyond.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Future</div>
+            <h4>More to Come</h4>
+            <p>Expanding services, training more Nigerians, and growing our team. The best of GT Arsenals is still ahead.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Ready to Work With Us?</h2>
+      <p>Get in touch and let's discuss how GT Arsenals can help you or your business.</p>
+      <div class="cta-actions">
+        <a href="../index.html#contact" class="btn btn-outline">Send a Message</a>
+        <a href="https://wa.me/2347071188890" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-placeholder footer-logo">
+          <span class="logo-icon">GT</span>
+          <span class="logo-text">ARSENALS <em>LTD</em></span>
+        </div>
+        <p>Your complete technology partner in Abuja, FCT. CAC Registered. Serving individuals, startups, and businesses across Nigeria.</p>
+        <p class="rc-note">RC: 8340467 &nbsp;|&nbsp; Est. March 2025</p>
+        <p style="margin-top:16px;">
+          <a href="#" aria-label="Facebook" style="margin-right:14px;font-size:1.1rem;">📘</a>
+          <a href="#" aria-label="Instagram" style="margin-right:14px;font-size:1.1rem;">📷</a>
+          <a href="#" aria-label="LinkedIn" style="margin-right:14px;font-size:1.1rem;">💼</a>
+          <a href="https://wa.me/2347071188890" aria-label="WhatsApp" style="font-size:1.1rem;">💬</a>
+        </p>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-services">
+        <h5>Services</h5>
+        <ul>
+          <li>IT Services &amp; Networking</li>
+          <li>Cybersecurity</li>
+          <li>Software Development</li>
+          <li>PC Assembly</li>
+          <li>Computer Repairs</li>
+          <li>Graphics Design</li>
+          <li>Training &amp; Skills</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Contact Us</h5>
+        <p>📧 <a href="mailto:info@gtarsenals.com">info@gtarsenals.com</a></p>
+        <p>📱 <a href="tel:+2347071188890">+234 707 118 8890</a></p>
+        <p>📍 Old Secretariat, Garki 1, Abuja, FCT</p>
+        <p>🕐 Mon – Sat &nbsp; 8am – 6pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span class="footer-year"></span> GT Arsenals Ltd. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; Built by GT Arsenals</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2347071188890" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬<span class="wa-tooltip">Chat on WhatsApp</span></a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -79,19 +79,31 @@ function initNavbar() {
     if (hero) hero.style.paddingTop = (barH + navH) + 'px';
   }
 
-  const onScroll = () => {
+  let scrollTimer = null;
+const onScroll = () => {
+    if (scrollTimer) return; // throttle to once per 60ms
+    scrollTimer = setTimeout(() => { scrollTimer = null; }, 80);
+
     const barH = getBarHeight();
-    if (window.scrollY > barH + 50) {
-      navbar.classList.add('scrolled');
-      if (isTransparent) {
-        navbar.classList.remove('transparent');
-        navbar.style.top = '0';
+    const scrolled = window.scrollY > barH + 50;
+
+    if (scrolled) {
+      if (!navbar.classList.contains('scrolled')) {
+        navbar.style.transition = 'background 0.65s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.65s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1), top 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        navbar.classList.add('scrolled');
+        if (isTransparent) {
+          navbar.classList.remove('transparent');
+          navbar.style.top = '0';
+        }
       }
     } else {
-      navbar.classList.remove('scrolled');
-      if (isTransparent) {
-        navbar.classList.add('transparent');
-        positionNavbar();
+      if (navbar.classList.contains('scrolled')) {
+        navbar.style.transition = 'background 0.65s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.65s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1), top 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        navbar.classList.remove('scrolled');
+        if (isTransparent) {
+          navbar.classList.add('transparent');
+          positionNavbar();
+        }
       }
     }
   };

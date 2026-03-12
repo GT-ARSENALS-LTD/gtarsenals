@@ -178,7 +178,7 @@ ul   { list-style: none; }
   width: 100%;
   z-index: 1000;
   padding: 16px 0;
-  transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+  transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease, top 0.35s ease;
 }
 
 /*
@@ -191,9 +191,10 @@ ul   { list-style: none; }
 .navbar.transparent {
   background: transparent;
   position: fixed;
-  /* top is set dynamically by JS — see initNavbar() in main.js */
+  width: 100%;
 }
-.navbar.scrolled     { background: var(--white); box-shadow: var(--shadow-md); padding: 11px 0; }
+
+.navbar.scrolled { background: var(--white); box-shadow: var(--shadow-md); padding: 11px 0; top: 0; }
 .navbar.always-white { background: var(--white); box-shadow: var(--shadow-sm); }
 
 /* Push hero down so content doesn't hide under fixed navbar + bar */

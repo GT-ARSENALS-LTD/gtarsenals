@@ -3,8 +3,8 @@
 # This file tells search engine bots (Google, Bing, etc.) which
 # pages they are allowed to crawl and index.
 #
-# Current setting: allow everything except the backend folder
-# (no reason for Google to index your server code).
+# Current setting: allow everything except backend, CSS, and JS
+# folders — no reason for Google to index server code or assets.
 #
 # You do NOT need to change this file. It works as-is.
 # ══════════════════════════════════════════════════════════════
@@ -12,6 +12,11 @@
 User-agent: *
 Allow: /
 Disallow: /backend/
+Disallow: /css/
+Disallow: /js/
 
 # Tell Google where your sitemap is
 Sitemap: https://gtarsenals.com/sitemap.xml
+
+# Preferred domain (used by Yandex and some other crawlers)
+Host: https://gtarsenals.com

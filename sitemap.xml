@@ -2,10 +2,7 @@
 <!--
   SITEMAP.XML — GT Arsenals Ltd
   ══════════════════════════════════════════════════════════════
-  This file tells Google about every page on your website so it
-  can index them faster and rank them in search results.
-
-  HOW TO SUBMIT THIS TO GOOGLE (do this once after going live):
+  HOW TO SUBMIT TO GOOGLE (do this once after going live):
   1. Go to https://search.google.com/search-console
   2. Sign in with your Google account
   3. Add your property: gtarsenals.com
@@ -21,7 +18,8 @@
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
+  <!-- ═══════════════════════════════ CORE PAGES ══════════════════════════════ -->
+
   <url>
     <loc>https://gtarsenals.com/</loc>
     <lastmod>2026-02-25</lastmod>
@@ -29,7 +27,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Main pages -->
   <url>
     <loc>https://gtarsenals.com/pages/services.html</loc>
     <lastmod>2026-02-25</lastmod>
@@ -52,16 +49,16 @@
   </url>
 
   <url>
-    <loc>https://gtarsenals.com/pages/about.html</loc>
+    <loc>https://gtarsenals.com/pages/blog.html</loc>
     <lastmod>2026-02-25</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://gtarsenals.com/pages/blog.html</loc>
+    <loc>https://gtarsenals.com/pages/about.html</loc>
     <lastmod>2026-02-25</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
@@ -72,7 +69,8 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Blog articles — add new ones here as you write them -->
+  <!-- ══════════════════════════════ BLOG ARTICLES ═════════════════════════════ -->
+
   <url>
     <loc>https://gtarsenals.com/pages/blog/cybersecurity-warning-signs.html</loc>
     <lastmod>2026-02-25</lastmod>
@@ -122,39 +120,80 @@
     <priority>0.7</priority>
   </url>
 
-
   <url>
-    <loc>https://gtarsenals.com/pages/blog/slow-wifi-fixes.html</loc>
+    <loc>https://gtarsenals.com/pages/blog/forex-crypto-scams-nigeria-2026.html</loc>
     <lastmod>2026-02-25</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://gtarsenals.com/pages/blog/phishing-scams-nigeria.html</loc>
+    <loc>https://gtarsenals.com/pages/blog/social-media-management-abuja-2026.html</loc>
     <lastmod>2026-02-25</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://gtarsenals.com/pages/blog/tech-skills-that-pay-nigeria-2026.html</loc>
+    <loc>https://gtarsenals.com/pages/blog/protect-computer-from-power-cuts-nigeria.html</loc>
     <lastmod>2026-02-25</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://gtarsenals.com/pages/blog/ram-upgrade-or-new-laptop.html</loc>
+    <loc>https://gtarsenals.com/pages/blog/free-software-tools-nigerian-sme-2026.html</loc>
     <lastmod>2026-02-25</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://gtarsenals.com/pages/blog/does-your-business-need-a-website-2026.html</loc>
+    <loc>https://gtarsenals.com/pages/blog/google-business-profile-nigeria-guide.html</loc>
     <lastmod>2026-02-25</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://gtarsenals.com/pages/blog/data-backup-plan-nigerian-business.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://gtarsenals.com/pages/blog/how-to-spot-fake-online-shops-nigeria.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://gtarsenals.com/pages/blog/home-office-setup-nigeria-2026.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://gtarsenals.com/pages/blog/freelancing-tech-skills-nigeria-2026.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://gtarsenals.com/pages/blog/best-printers-nigeria-office-2026.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://gtarsenals.com/pages/blog/ai-tools-nigerian-businesses-2026.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
@@ -162,9 +201,9 @@
     ADD FUTURE BLOG ARTICLES HERE — copy and paste this block:
 
     <url>
-      <loc>https://gtarsenals.com/pages/blog/YOUR-ARTICLE-NAME.html</loc>
+      <loc>https://gtarsenals.com/pages/blog/YOUR-ARTICLE-SLUG.html</loc>
       <lastmod>YYYY-MM-DD</lastmod>
-      <changefreq>yearly</changefreq>
+      <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   -->
